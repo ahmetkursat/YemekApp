@@ -49,7 +49,7 @@ namespace SignalRApi.Controllers
             return Ok("Category Silinmiştir");
         }
 
-        [HttpPut ("{id}")]
+        [HttpPut]
         public IActionResult UpgradeCategory(UpdateCategoryDto updateCategoryDto)
         {
             Category category = new Category()
@@ -63,7 +63,7 @@ namespace SignalRApi.Controllers
             return Ok("Update Yapıldı");
 
         }
-        [HttpGet("GetOneCategory")]
+        [HttpGet("{id}")]
          public IActionResult GetOneCategory(int id)
         {
             var getid = _categoryService.TGetById(id);

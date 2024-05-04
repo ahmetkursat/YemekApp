@@ -43,6 +43,7 @@ namespace SignalRApi.Controllers
                 Status = y.Status,
                 CategoryName = y.Category.CategoryName,
 
+
             });
             
             return Ok(values);
@@ -61,6 +62,8 @@ namespace SignalRApi.Controllers
                 ProductID = createProductDto.ProductID,
                 ProductName = createProductDto.ProductName,
                 Status = createProductDto.Status,
+                CategoryId = createProductDto.CategoryId,
+                
             };
             _productService.TAdd(product);
             return Ok("Product Oluşturuldu");
