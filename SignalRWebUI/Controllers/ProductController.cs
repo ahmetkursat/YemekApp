@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using SignalRWebUI.Dtos.CategoryDtos;
 using SignalRWebUI.Dtos.ProductDtos;
+using System.Text;
+using System.Text.Unicode;
 
 namespace SignalRWebUI.Controllers
 {
@@ -51,7 +53,7 @@ namespace SignalRWebUI.Controllers
 			createProductDto.Status = true;
 			var client = _httpClientFactory.CreateClient();
 			var jsondata = JsonConvert.SerializeObject(createProductDto);
-			StringContent stringContent = new StringContent(jsondata);
+			StringContent stringContent = new StringContent(jsondata, Encoding.UTF8, "application/json");
 			var responsemessage = await client.PostAsync("https://localhost:7249/api/Product",stringContent);
             if (responsemessage.IsSuccessStatusCode)
             {
@@ -71,7 +73,7 @@ namespace SignalRWebUI.Controllers
 			return View();
 		}
 
-		[HttpGet]
+	
 		public async Task<IActionResult> UpdateProduct(int id)
 		{
 			var client = _httpClientFactory.CreateClient();
@@ -79,7 +81,7 @@ namespace SignalRWebUI.Controllers
 			if(responsemessage.IsSuccessStatusCode)
 			{
 				var jsonData = await responsemessage.Content.ReadAsStringAsync();
-				var values = JsonConvert.DeserializeObject<List<UpdateProductDto>>(jsonData);
+				var values = JsonConvert.DeserializeObject<UpdateProductDto>(jsonData);
 				return View(values);
 			}
 			return View();
@@ -90,7 +92,7 @@ namespace SignalRWebUI.Controllers
 		{
 			var client = _httpClientFactory.CreateClient();	
 			var jsondata = JsonConvert.SerializeObject(updateProductDto);
-			StringContent content = new StringContent(jsondata);
+			StringContent content = new StringContent(jsondata, Encoding.UTF8, "application/json");
 			var responsemessage = await client.PutAsync($"https://localhost:7249/api/Product/",content);
 			if(responsemessage.IsSuccessStatusCode)
 			{
@@ -98,6 +100,6 @@ namespace SignalRWebUI.Controllers
 			}
 			return View();
 		}
-	
+
 	}
 }

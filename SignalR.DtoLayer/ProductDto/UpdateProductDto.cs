@@ -19,6 +19,6 @@ namespace SignalR.DtoLayer.ProductDto
 
 		public bool Status { get; set; }
 
-		public string CategoryName { get; set; }
-	}
+        public int CategoryID { get; set; }
+    }
 }
