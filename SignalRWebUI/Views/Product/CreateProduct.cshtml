@@ -37,7 +37,7 @@
 						<div class="card-body">
 							<div class="form-group">
 								<label for="categoryname">Ürünün Kategorsini Seçiniz</label>
-								@Html.DropDownListFor(x => x.CategoryName, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+								@Html.DropDownListFor(x =>x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
 							</div>
 						</div>
 						<div class="card-body">

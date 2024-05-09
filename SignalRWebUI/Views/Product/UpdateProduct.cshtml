@@ -1,6 +1,5 @@
 ﻿@model UpdateProductDto
 
-
 @{
 	ViewData["Title"] = "UpdateProduct";
 	Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -8,23 +7,48 @@
 
 <div class="content">
 	<div class="container-fluid">
-		<h4 class="page-title">Kategori işlemleri</h4>
+		<h4 class="page-title">Ürün işlemleri</h4>
 		<div class="row">
 			<div class="col-md-12">
 				<form method="post">
 					<div class="card">
+						<input type="hidden" asp-for="ProductID" />
 						<div class="card-header">
-							<div class="card-title">Yeni Kategory Girişi</div>
+							<div class="card-title">Ürün Kategory Girişi</div>
 						</div>
 						<div class="card-body">
-							<input type="hidden" asp-for="ProductID" />
 							<div class="form-group">
-								<label for="categoryname">Kategori Adını Güncelle</label>
-								<input type="text" class="form-control" asp-for="ProductName" id="ProductName" placeholder="ProductName">
+								<label for="categoryname">Ürünün Adını Giriniz</label>
+								<input type="text" class="form-control" asp-for="ProductName" id="ProductName" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="categoryname">Ürünün Fiyatını Giriniz</label>
+								<input type="text" class="form-control" asp-for="Price" id="Price" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="categoryname">Ürünün Görselini Giriniz</label>
+								<input type="text" class="form-control" asp-for="ImageUrl" id="ImageUrl" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="categoryname">Ürünün Kategorsini Seçiniz</label>
+								@Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="categoryname">Ürünün Açıklamasını Giriniz</label>
+								
+								<input type="text" class="form-control" asp-for="Description" id="Description" placeholder="Enter Email">
 							</div>
 						</div>
 						<div class="card-action">
-							<button class="btn btn-primary">Kategory Güncelle</button>
+							<button class="btn btn-primary">Ürünü Ekle</button>
 						</div>
 					</div>
 				</form>
@@ -33,6 +57,7 @@
 		</div>
 	</div>
 </div>
+
 
 
 

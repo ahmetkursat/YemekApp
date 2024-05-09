@@ -62,6 +62,7 @@ namespace SignalRApi.Controllers
                 ImageUrl = createProductDto.ImageUrl,
                 Price = createProductDto.Price,
                 Status = createProductDto.Status,
+                CategoryId = createProductDto.CategoryId,
 
             };
             _productService.TAdd(product);
