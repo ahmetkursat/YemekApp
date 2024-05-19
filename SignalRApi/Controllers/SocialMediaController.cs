@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.ProductDto;
@@ -22,9 +21,9 @@ namespace SignalRApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult ProductGet()
+        public IActionResult SocialMediaGet()
         {
-            var list = _mapper.Map<List<ResultProductDto>>(_socialMediaService.TGetListAll());
+            var list = _mapper.Map<List<ResultSocialMediaDto>>(_socialMediaService.TGetListAll());
             return Ok(list);
         }
         [HttpPost]
@@ -37,7 +36,7 @@ namespace SignalRApi.Controllers
                 Title = createSocialMediaDto.Title,
                 Url = createSocialMediaDto.Url,
             };
-             _socialMediaService.TAdd(socialMedia);
+            _socialMediaService.TAdd(socialMedia);
             return Ok("Güncelleme Yapıldı");
         }
         [HttpPut]
@@ -54,12 +53,19 @@ namespace SignalRApi.Controllers
             _socialMediaService.TAdd(socialMedia);
             return Ok("Social Media Update");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult SocialMediaDelete(int id )
         {
             var getid = _socialMediaService.TGetById(id);
              _socialMediaService.TDelete(getid);
             return Ok("Socail media delete");
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult SocialMediaIdGet(int id)
+        {
+            var getid = _socialMediaService.TGetById(id);
+            return Ok(getid);
         }
     }
 }

@@ -58,14 +58,14 @@ namespace SignalRApi.Controllers
             _contactService.TUpdate(contact);
             return Ok("Contact Güncellendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult ContactDelete(int id)
         {
             var getid = _contactService.TGetById(id);
             _contactService.TDelete(getid);
             return Ok("Contact Silindi");
         }
-        [HttpGet("GetOneContact")]
+        [HttpGet("{id}")]
         public IActionResult GetOneContact (int id)
         {
             var getid = _contactService.TGetById(id);

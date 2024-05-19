@@ -1,6 +1,6 @@
 ﻿namespace SignalRWebUI.Dtos.AboutDtos
 {
-	public class CreateAboutDto
+	public class CreateBookingDto
 	{
 		public string ImageUrl { get; set; }
 

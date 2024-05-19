@@ -1,0 +1,66 @@
+﻿@model SignalRWebUI.Dtos.FeatureDtos.UpdateFeatureDto
+
+
+@{
+	ViewData["Title"] = "UpdateFeature";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Feature işlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Yeni Feature Girişi</div>
+						</div>
+						<div class="card-body">
+							<input type="hidden" asp-for="FeatureID" />
+							<div class="form-group">
+								<label for="Title1">Feature Title1  Giriniz</label>
+								<input type="text" class="form-control" asp-for="Title1" id="Title1" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Title2">Feature Title2 Adını </label>
+								<input type="text" class="form-control" asp-for="Title2" id="Title2" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Title">Feature Title3 Title </label>
+								<input type="text" class="form-control" asp-for="Title3" id="Title3" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Description1">Description1 Adını </label>
+								<input type="text" class="form-control" asp-for="Description1" id="Description1" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Description2">Description2 Adını </label>
+								<input type="text" class="form-control" asp-for="Description2" id="Description2" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Description3">Description3 Adını </label>
+								<input type="text" class="form-control" asp-for="Description3" id="Description3" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Feature Ekle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+

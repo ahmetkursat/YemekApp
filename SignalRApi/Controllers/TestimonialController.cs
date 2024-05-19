@@ -58,14 +58,14 @@ namespace SignalRApi.Controllers
             return Ok("Güncelleme Yapıldı");
 
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult TestimonialDelete(int id)
         {
             var getid = _testimontalService.TGetById(id);
             _testimontalService.TDelete(getid);
             return Ok("testimonial silindi");
         }
-        [HttpGet("TestimonialOneId")]
+        [HttpGet("{id}")]
         public IActionResult TestimonialServiceGetOneId(int id)
         {
             var getid = _testimontalService.TGetById(id);

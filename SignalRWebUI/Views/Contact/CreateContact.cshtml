@@ -1,0 +1,53 @@
+﻿@model SignalRWebUI.Dtos.ContactDtos.CreateContactDto
+
+
+@{
+	ViewData["Title"] = "CreateContact";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Contact işlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Yeni Contact Girişi</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="FooterDescription">Contact  Footer Adını FooterDescription  Giriniz</label>
+								<input type="text" class="form-control" asp-for="FooterDescription" id="FooterDescription" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Location">Contact Adını Location</label>
+								<input type="text" class="form-control" asp-for="Location" id="Location" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Mail">Contact Adını Mail</label>
+								<input type="email" class="form-control" asp-for="Mail" id="Mail" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Phone">Contact Adını Phone</label>
+								<input type="text" class="form-control" asp-for="Phone" id="Phone" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Kategory Ekle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+

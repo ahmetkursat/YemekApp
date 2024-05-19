@@ -1,12 +1,12 @@
 ﻿@model SignalRWebUI.Dtos.AboutDtos.UpdateAboutDto
 @{
-	ViewData["Title"] = "UpdateCategory";
+	ViewData["Title"] = "UpdateAbout";
 	Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
 <div class="content">
 	<div class="container-fluid">
-		<h4 class="page-title">Kategori işlemleri</h4>
+		<h4 class="page-title">Hakkımızda işlemleri</h4>
 		<div class="row">
 			<div class="col-md-12">
 				<form method="post">
@@ -17,9 +17,18 @@
 						<div class="card-body">
 							<input type="hidden" asp-for="AboutID" />
 							<div class="form-group">
-								<label for="categoryname">Kategori Adını Güncelle</label>
+								<label for="Title">hakkımda Adını Güncelle</label>
+								<input type="text" class="form-control" asp-for="Title" id="Title" placeholder="Kategori Adı">
+							</div>
+							<div class="form-group">
+								<label for="Description">Hakkımda yazı güncelle</label>
 								<input type="text" class="form-control" asp-for="Description" id="Description" placeholder="Kategori Adı">
 							</div>
+							<div class="form-group">
+								<label for="ImageUrl">Görsel Id Güncelle</label>
+								<input type="text" class="form-control" asp-for="ImageUrl" id="ImageUrl" placeholder="Kategori Adı">
+							</div>
+
 						</div>
 						<div class="card-action">
 							<button class="btn btn-primary">Kategory Güncelle</button>

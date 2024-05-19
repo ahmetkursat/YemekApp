@@ -1,4 +1,4 @@
-﻿@model SignalRWebUI.Dtos.AboutDtos.CreateAboutDto
+﻿@model SignalRWebUI.Dtos.AboutDtos.CreateBookingDto
 
 
 @{
@@ -18,12 +18,20 @@
 						</div>
 						<div class="card-body">
 							<div class="form-group">
-								<label for="categoryname">Kategori Adını Giriniz</label>
-								<input type="text" class="form-control" asp-for="CategoryName" id="categoryname" placeholder="Enter Email">
+								<label for="Title">Kategori Başlığı Giriniz</label>
+								<input type="text" class="form-control" asp-for="Title" id="Title" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="Description">Kategori İçeriği Giriniz</label>
+								<textarea rows="5" class="form-control" asp-for="Description" id="Description"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="ImageUrl">Görsel Url Giriniz</label>
+								<input type="text" class="form-control" asp-for="ImageUrl" id="ImageUrl" placeholder="Enter Email">
 							</div>
 						</div>
 						<div class="card-action">
-							<button class="btn btn-primary">Kategory Ekle</button>
+							<button class="btn btn-primary">Hakkımda Ekle</button>
 						</div>
 					</div>
 				</form>

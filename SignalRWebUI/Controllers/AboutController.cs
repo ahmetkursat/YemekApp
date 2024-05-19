@@ -35,12 +35,12 @@ namespace SignalRWebUI.Controllers
 			}
 
 			[HttpPost]
-			public async Task<IActionResult> CreateAbout(CreateAboutDto createAboutDto)
+			public async Task<IActionResult> CreateAbout(CreateBookingDto createAboutDto)
 			{
 				var client = _httpClientFactory.CreateClient();
 				var jsonData = JsonConvert.SerializeObject(createAboutDto);
 				StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-				var responsoMessage = await client.PostAsync("https://localhost:7249/api/Category", stringContent);
+				var responsoMessage = await client.PostAsync("https://localhost:7249/api/About", stringContent);
 				if (responsoMessage.IsSuccessStatusCode)
 				{
 					return RedirectToAction("Index");

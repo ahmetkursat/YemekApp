@@ -60,14 +60,15 @@ namespace SignalRApi.Controllers
             _featureService.TUpdate(feature);
             return Ok(feature);
         }
-        [HttpDelete]
-        public IActionResult Delete (int id)
+        [HttpDelete("{id}")]
+        public IActionResult FeatureDelete (int id)
         {
             var list = _featureService.TGetById(id);
+            _featureService.TDelete(list);
             return Ok(list);
         }
 
-        [HttpGet("getonefeature")]
+        [HttpGet("{id}")]
         public IActionResult FeatureGetId(int id)
         {
             var list = _featureService.TGetById(id);

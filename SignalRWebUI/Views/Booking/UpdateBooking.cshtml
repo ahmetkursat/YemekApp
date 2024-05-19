@@ -1,0 +1,53 @@
+﻿@model SignalRWebUI.Dtos.BookingDtos.UpdateBookingDto
+@{
+	ViewData["Title"] = "UpdateBooking";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+	
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Rezervasyon işlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Yeni Rezervasyon Girişi</div>
+						</div>
+						<div class="card-body">
+							<input type="hidden" asp-for="BookingId" />
+							<div class="form-group">
+								<label for="Name">Rezervasyon adını Giriniz</label>
+								<input type="text" class="form-control" asp-for="Name" id="Name" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="PersoCount">Rezervasyon kişisayısını Giriniz</label>
+								<input type="number" class="form-control" asp-for="PersoCount" id="PersoCount" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="Mail">Rezervasyon Mail Giriniz</label>
+								<input type="email" class="form-control" asp-for="Mail" id="Mail" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="Date">Rezervasyon Date  Giriniz</label>
+								<input type="date" class="form-control" asp-for="Date" id="Date" placeholder="Enter Email">
+							</div><div class="form-group">
+								<label for="Phone">Rezervasyon Numara Giriniz</label>
+								<input type="text" class="form-control" asp-for="Phone" id="Phone" placeholder="Enter Email">
+							</div>
+
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Kategory Güncelle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+

@@ -1,0 +1,53 @@
+﻿@model SignalRWebUI.Dtos.DiscountDtos.CreateDiscountDto
+
+
+@{
+	ViewData["Title"] = "CreateDiscount";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Description işlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Yeni Description Girişi</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Description">Description  Giriniz</label>
+								<input type="text" class="form-control" asp-for="Description" id="Description" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ImageUrl">ImageUrl Adını </label>
+								<input type="text" class="form-control" asp-for="ImageUrl" id="ImageUrl" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Title">Discount Title </label>
+								<input type="text" class="form-control" asp-for="Title" id="Title" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Amount">Amount Adını </label>
+								<input type="text" class="form-control" asp-for="Amount" id="Amount" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Kategory Ekle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
