@@ -23,7 +23,8 @@
 								<tr>
 									<th scope="col">#</th>
 									<th scope="col">Başlık</th>
-									<th scope="col">Link</th>
+									<th scope="col">ImageUrl</th>
+									<th scope="col">Comment</th>
 									<th scope="col">Sil</th>
 									<th scope="col">Güncelle</th>
 								</tr>
@@ -34,17 +35,14 @@
 									<tr>
 										<td>@item.TestimonialID</td>
 										<td>@item.Title</td>
-										<td>@item.Comment</td>
 										<td>@item.ImageUrl</td>
+										<td>@item.Comment</td>
 										<td>@item.Status</td>
-										<td>@item.Name</td>
 										<td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-outline-danger">Sil</a></td>
 										<td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-outline-success">Güncelle</a></td>
 									</tr>
 
 								}
-
-								</tr>
 							</tbody>
 						</table>
 						<a href="/Testimonial/CreateTestimonial" class="btn btn-primary">Yeni Category Girişi</a>

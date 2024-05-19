@@ -1,0 +1,52 @@
+﻿@model SignalRWebUI.Dtos.TestimonialDto.UpdateTestimonialDto
+
+
+@{
+	ViewData["Title"] = "UpdateTestimonial";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Testimonial Media işlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Testimonial Media Girişi</div>
+						</div>
+						<div class="card-body">
+							<input type="hidden" asp-for="TestimonialID" />
+							<div class="form-group">
+								<label for="Name">Name Giriniz</label>
+								<input type="Name" class="form-control" asp-for="Name" id="Title" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="Comment">Comment Giriniz</label>
+								<input type="Icon" class="form-control" asp-for="Comment" id="Icon" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="Title">Title Giriniz</label>
+								<input type="Title" class="form-control" asp-for="Title" id="Title" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="Url">Link Giriniz</label>
+								<input type="Url" class="form-control" asp-for="Status" id="Url" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="ImageUrl">ImageUrl Giriniz</label>
+								<input type="ImageUrl" class="form-control" asp-for="ImageUrl" id="ImageUrl" placeholder="Enter Email">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Sosyal Media HESABI Ekle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
