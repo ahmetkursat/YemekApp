@@ -20,4 +20,8 @@
     <ProjectReference Include="..\SignalR.DtoLayer\SignalR.DtoLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ToDoList\" />
+  </ItemGroup>
+
 </Project>

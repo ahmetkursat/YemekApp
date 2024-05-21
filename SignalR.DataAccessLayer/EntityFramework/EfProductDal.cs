@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace SignalR.DataAccessLayer.EntityFramework
 {
-    public class EfProductDal : GenericRepository<Product>, IProductDal
+	public class EfProductDal : GenericRepository<Product>, IProductDal
     {
         public EfProductDal(SignalRContext context) : base(context)
         {
@@ -21,5 +21,12 @@ namespace SignalR.DataAccessLayer.EntityFramework
         {
             throw new NotImplementedException();
         }
-    }
+
+		public int ProductCount()
+		{
+			using var context = new SignalRContext();
+
+            return context.Products.Count();
+		}
+	}
 }
