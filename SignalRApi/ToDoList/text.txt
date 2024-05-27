@@ -1,3 +1,20 @@
 CategoryCount 
 productcount
-AKTÝF CATEGOR
+AKTÝF CATEGORi sayýsý
+--pasif kategori sayýsý
+
+--kategori adýna  göre ürün sayýsý1
+--kategori adýna  göre ürün sayýsý2
+
+ort fiyat
+en yüksek ürün fiyat
+en düþük ürün fiyat
+ort hamburger fiyatý
+
+toplam sipariþ sayýsý
+aktif sipariþ sayýsý
+son sipariþ tutarý
+kasa tutarý 
+bugunkü kazanc
+masa sayýsý
+
