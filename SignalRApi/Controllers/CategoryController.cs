@@ -42,6 +42,7 @@ namespace SignalRApi.Controllers
 		{
 			return Ok(_categoryService.TPassiveCategory());
 		}
+		
 		[HttpPost]
         public IActionResult CreateCategory(CreateCategoryDto createCategoryDto)
         {
