@@ -27,6 +27,8 @@ namespace SignalR.DataAccessLayer.Concrete
         public DbSet<Feature> Features { get; set; }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
         public DbSet<SocialMedia> SocialMedias { get; set; }
 
